@@ -1,0 +1,80 @@
+@layer components {
+    .products {
+        @apply grid;
+        @apply grid-cols-1;
+        @apply gap-4;
+        @apply p-4;
+
+        .product {
+            @apply border-gray-100 flex flex-col rounded-none cursor-pointer;
+
+            &__image {
+                @apply rounded-sm w-full h-full;
+            }
+
+            &__content {
+                @apply bg-white p-2 rounded-sm mx-1 -mt-8 relative shadow-lg;
+            }
+
+            &__title {
+                @apply font-oswald text-xl uppercase mb-1 tracking-tight font-semibold text-secundary;
+            }
+
+            &__description {
+                @apply text-gray-700 leading-tight;
+            }
+
+            &__price {
+                @apply text-sm font-semibold text-white mt-2;
+
+                span {
+                    @apply bg-success py-1 px-2 rounded-2xl;
+                }
+            }
+
+            &__quality {
+                @apply text-xs text-gold leading-tight mt-1;
+            }
+        }
+    }
+
+    @screen sm {
+        .products {
+            @apply grid-cols-2;
+
+            .product {
+                @apply flex-row shadow-lg rounded-sm;
+
+                &__image {
+                    @apply rounded-r-none;
+                }
+
+                &__content {
+                    @apply m-0 rounded-l-none shadow-none;
+                }
+
+                &__title {
+                    @apply text-lg;
+                }
+            }
+        }
+    }
+
+    @screen md {
+        .products {
+            @apply grid-cols-2;
+        }
+    }
+
+    @screen lg {
+        .products {
+            @apply grid-cols-3;
+
+            .product {
+                &__image {
+                    @apply object-cover w-48 h-full;
+                }
+            }
+        }
+    }
+}

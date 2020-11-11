@@ -1,0 +1,17 @@
+@layer components {
+  .header {
+    @apply bg-secundary flex flex-row justify-between text-white items-center px-2 py-2 cursor-pointer;
+
+    &__logo img {
+      @apply h-8;
+      
+      &:focus {
+        @apply outline-none;
+      }
+    }
+
+    &_menu {
+      @apply text-4xl;
+    }
+  }
+}

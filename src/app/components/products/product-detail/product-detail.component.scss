@@ -1,0 +1,75 @@
+@layer components {
+  .product {
+    @apply border-gray-100 grid grid-cols-1 rounded-none;
+
+    &__image {
+      @apply rounded-sm w-full h-full;
+    }
+
+    &__content {
+      @apply bg-white p-4 rounded-sm mx-1 -mt-8 relative shadow-lg;
+    }
+
+    &__title {
+      @apply font-oswald text-xl uppercase mb-1 tracking-tight font-semibold text-secundary;
+    }
+
+    &__description {
+      @apply text-gray-700 leading-tight;
+    }
+
+    &__price {
+      @apply text-sm font-semibold text-white mt-2;
+
+      span {
+        @apply bg-success py-1 px-2 rounded-2xl;
+      }
+    }
+
+    &__quality {
+      @apply text-xs text-gold leading-tight mt-1;
+    }
+  }
+
+  @screen sm {
+    .product {
+      @apply flex-row shadow-lg rounded-sm;
+
+      &__image {
+        @apply rounded-r-none;
+      }
+
+      &__content {
+        @apply m-0 rounded-l-none shadow-none;
+      }
+
+      &__title {
+        @apply text-lg;
+      }
+    }
+  }
+
+  @screen md {
+    .product {
+      @apply grid-cols-2 w-10/12 mx-auto;
+
+      &__content {
+        @apply p-8;
+      }
+    }
+  }
+
+  @screen lg {
+    .product {
+      @apply w-8/12 mx-auto;
+
+      &__title {
+        @apply text-4xl;
+      }
+
+      &__description {
+        @apply text-lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<section class="products container mx-auto">
+    <div class="product" *ngFor="let product of products" (click)="detail(product.id)">
+        <div>
+            <img [src]="product.image" [alt]="product.name" class="product__image"
+                />
+        </div>
+        <div class="product__content">
+            <h2 class="product__title">{{ product.name }}</h2>
+            <p class="product__description">{{ product.description }}</p>
+            <div class="product__price"><span>{{ product.price | currency:currencyCode:'COP ' }}</span></div>
+            <div class="product__quality">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i> / {{ product.reviewCount }} Reseñas</div>
+        </div>
+    </div>
+</section>
