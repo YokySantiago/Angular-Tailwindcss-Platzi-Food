@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private _products = [
+  private products: Product[] = [
     {
       id: 1,
       name: 'Haburguesa con queso',
@@ -78,16 +79,15 @@ export class ProductService {
       reviewCount: 36,
       image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80'
     },
-
-  ]
+  ];
 
   constructor() { }
 
-  getAll() {
-    return this._products
+  getAll(): Product[] {
+    return this.products;
   }
 
-  getOne(id: number): any {
-    return this._products.find(product => product.id === id)
+  getOne(id: number): Product {
+    return this.products.find(product => product.id === id);
   }
 }
