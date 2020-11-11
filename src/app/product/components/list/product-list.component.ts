@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Product } from 'src/app/interfaces/product';
-import { ProductService } from '../../../services/product.service';
+import { Product } from '../../../core/interfaces/product';
+import { ProductService } from '../../../core/services/product/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +10,7 @@ import { ProductService } from '../../../services/product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products: Product;
+  products: Product[];
 
   constructor(
     private productService: ProductService,
