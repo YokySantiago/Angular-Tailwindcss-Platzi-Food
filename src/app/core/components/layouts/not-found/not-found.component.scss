@@ -1,0 +1,28 @@
+@layer components {
+    .not-found {
+        @apply flex flex-col w-screen h-screen justify-center items-center bg-gray-200;
+
+        & img {
+            @apply h-24;
+        }
+        & p {
+            @apply uppercase font-oswald inline font-semibold text-2xl tracking-tight text-primary;
+        }
+    }
+
+    @screen sm {
+        .not-found {
+            & p {
+                @apply text-3xl;
+            }
+        } 
+    }
+
+    @screen md {
+        .not-found {
+            & img {
+                @apply h-40;
+            }
+        } 
+    }
+}

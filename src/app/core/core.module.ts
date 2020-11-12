@@ -6,12 +6,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductService } from './services/product/product.service';
 import { MainComponent } from './components/layouts/main/main.component';
+import { NotFoundComponent } from './components/layouts/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { MainComponent } from './components/layouts/main/main.component';
   exports: [
     FooterComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    NotFoundComponent
   ],
   providers: [
     ProductService

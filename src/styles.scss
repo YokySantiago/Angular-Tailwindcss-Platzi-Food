@@ -3,6 +3,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
+  body {
+    @apply text-secundary;
+  }
+}
+
 @layer components {
   .social-network {
     @apply mr-2 rounded-full border border-white w-8 h-8 text-center cursor-pointer;

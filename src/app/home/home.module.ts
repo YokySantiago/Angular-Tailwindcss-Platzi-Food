@@ -6,18 +6,18 @@ import { HomeRoutingModule } from './home-routing.module';
 import { ProductModule } from '../product/product.module';
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContactModule } from '../contact/contact.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerComponent,
-    ContactComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ProductModule
+    ProductModule,
+    ContactModule
   ]
 })
 export class HomeModule { }
