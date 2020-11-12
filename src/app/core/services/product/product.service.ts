@@ -9,25 +9,25 @@ export class ProductService {
   private products: Product[] = [
     {
       id: 1,
-      name: 'Haburguesa con queso',
-      description: 'Hamburguesa con queso y aderezo de chipotle',
-      price: 17000,
+      name: 'Combo Hamburguesa Doble',
+      description: 'Hamburguesa 100% de res con 2 carnes (115 gr), papas y bebida a elección',
+      price: 22700,
       reviewCount: 36,
       image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80'
     },
     {
       id: 2,
-      name: 'Haburguesa artesanal',
-      description: 'Hamburguesa con queso y aderezo de chipotle',
-      price: 25000,
+      name: 'Combo Sencilla',
+      description: 'Hamburguesa 100% carne de res (115 gr), papas home y bebida a elección.',
+      price: 18700,
       reviewCount: 36,
       image: 'https://images.unsplash.com/photo-1508736793122-f516e3ba5569?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2848&q=80&w=500&h=500'
     },
     {
       id: 3,
-      name: 'Haburguesa de la casa',
-      description: 'Hamburguesa con queso y aderezo de chipotle',
-      price: 18000,
+      name: 'Combo Hamburguesa Veggie',
+      description: 'Hamburguesa vegetariana de champiñón portobello apanada rellena de queso, con tomate, lechuga, salsas',
+      price: 22700,
       reviewCount: 36,
       image: 'https://images.unsplash.com/photo-1584178639036-613ba57e5e39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80&w=500&h=500'
     },

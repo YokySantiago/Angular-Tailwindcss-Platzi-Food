@@ -27,7 +27,11 @@
     }
 
     &__quality {
-      @apply text-xs text-gold leading-tight mt-1;
+      @apply text-sm text-gold leading-tight mt-1  mb-4;
+    }
+
+    & .btn {
+      @apply ml-0;
     }
   }
 

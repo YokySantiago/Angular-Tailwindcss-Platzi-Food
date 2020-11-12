@@ -47,14 +47,24 @@
 
 
   .btn {
-    @apply bg-info rounded-sm px-4 py-2 text-white ml-2;
+    @apply bg-info rounded-sm px-4 py-2 text-white ml-2 w-full;
 
     &--cancel {
       @apply bg-secundary bg-opacity-75 text-white;
     }
+    
+    &--primary {
+      @apply bg-primary text-gold;
+    }
 
     &:active {
       @apply opacity-75;
+    }
+  }
+
+  @screen sm {
+    .btn {
+      @apply w-auto;
     }
   }
 }
