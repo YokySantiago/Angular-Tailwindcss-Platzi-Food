@@ -6,7 +6,7 @@
     <div class="product__content">
         <h2 class="product__title">{{ product.name }}</h2>
         <p class="product__description">{{ product.description }}</p>
-        <div class="product__price"><span>{{ product.price | currency }}</span></div>
+        <div class="product__price"><span>{{ product.price | currency:'COP ' }}</span></div>
         <div class="product__quality">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
