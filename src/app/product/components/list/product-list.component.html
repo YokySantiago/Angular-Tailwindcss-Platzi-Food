@@ -1,5 +1,5 @@
 <section class="products container mx-auto">
-    <div class="product" *ngFor="let product of products" (click)="detail(product.id)">
+    <div class="product" *ngFor="let product of products| slice:0:8" (click)="detail(product.id)">
         <div>
             <img [src]="product.image" [alt]="product.name" class="product__image"
                 />
@@ -7,7 +7,7 @@
         <div class="product__content">
             <h2 class="product__title">{{ product.name }}</h2>
             <p class="product__description">
-                {{ product.description | slice:0:40}}<span *ngIf="product.description.length >= 50">...</span>
+                {{ product.description | slice:0:60}}<span *ngIf="product.description.length >= 60">...</span>
             </p>
             <div class="product__price"><span>{{ product.price | currency:currencyCode:'COP ' }}</span></div>
             <div class="product__quality">

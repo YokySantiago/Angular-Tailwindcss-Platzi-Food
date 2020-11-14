@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  menu: {option: string, link: string}[] = [
+    {option: 'Productos', link: '/products'},
+    {option: 'Contáctenos', link: '/contact'},
+  ];
+
+  menuOpened: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

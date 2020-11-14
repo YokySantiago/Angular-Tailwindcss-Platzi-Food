@@ -43,16 +43,6 @@
             @apply grid-cols-2;
 
             .product {
-                @apply flex-row shadow-lg rounded-sm;
-
-                &__image {
-                    @apply rounded-r-none;
-                }
-
-                &__content {
-                    @apply m-0 rounded-l-none shadow-none;
-                }
-
                 &__title {
                     @apply text-lg;
                 }
@@ -62,19 +52,13 @@
 
     @screen md {
         .products {
-            @apply grid-cols-2;
+            @apply grid-cols-3;
         }
     }
 
     @screen lg {
         .products {
-            @apply grid-cols-3;
-
-            .product {
-                &__image {
-                    @apply object-cover w-48 h-full;
-                }
-            }
+            @apply grid-cols-4;
         }
     }
 }
