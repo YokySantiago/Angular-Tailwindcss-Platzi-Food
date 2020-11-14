@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
     {option: 'Contáctenos', link: '/contact'},
   ];
 
-  menuOpened: boolean = false;
+  menuOpened = false;
 
   constructor() { }
 
