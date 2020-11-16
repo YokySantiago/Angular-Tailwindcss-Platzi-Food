@@ -27,8 +27,16 @@
   }
 
   .form {
-    &__input {
-      @apply bg-gray-200 border w-full py-2 px-4 rounded-sm border-gray-400 text-secundary mb-2 outline-none;
+    &__group {
+      @apply flex flex-col w-full;
+    }
+
+    &__control {
+      @apply bg-gray-200 border w-full py-2 px-4 rounded-sm border-gray-400 text-secundary mt-2 outline-none;
+
+      &--invalid {
+        @apply border-error;
+      }
 
       &:active {
         @apply border-info;
@@ -39,8 +47,12 @@
       }
     }
 
+    &__feedback {
+      @apply text-sm text-error;
+    }
+
     &__buttons {
-      @apply flex flex-row justify-end;
+      @apply flex flex-row justify-end mt-2;
     }
   }
 

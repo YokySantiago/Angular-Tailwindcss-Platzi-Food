@@ -1,0 +1,14 @@
+<div class="form__feedback">
+    <p *ngIf="control.invalid && control.dirty && control.hasError('required')">
+        Es un campo obligatorio
+    </p>
+    <p *ngIf="control.invalid && control.dirty && control.hasError('email')">
+        No es un correo válido
+    </p>
+    <p *ngIf="control.invalid && control.dirty && control.hasError('minlength')">
+        Debe tener mínimo {{ control.errors.minlength.requiredLength }} caracteres
+    </p>
+    <p *ngIf="control.invalid && control.dirty && control.hasError('maxlength')">
+        Debe tener máximo {{ control.errors.maxlength.requiredLength }} caracteres
+    </p>
+</div>
