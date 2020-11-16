@@ -10,22 +10,22 @@
             <form [formGroup]="form" (ngSubmit)="save($event)">
                 <div class="form__group">
                     <input type="text" name="name" id="name" placeholder="¿Cómo te llamas?" 
-                        [ngClass]="{'form__control': true, 'form__control--invalid': form.get('name').invalid && form.get('name').dirty}"
+                        [ngClass]="{'form__control': true, 'form__control--invalid': nameField.invalid && nameField.dirty}"
                         formControlName="name"
                         />
-                    <app-form-feedback [control]="form.get('name')"></app-form-feedback>
+                    <app-form-feedback [control]="nameField"></app-form-feedback>
                 </div>
                 <div class="form__group">
                     <input type="email" name="email" id="email" placeholder="¿Cómo es tu correo electrónico?" 
-                        [ngClass]="{'form__control': true, 'form__control--invalid': form.get('email').invalid && form.get('email').dirty}"
+                        [ngClass]="{'form__control': true, 'form__control--invalid': emailField.invalid && emailField.dirty}"
                         formControlName="email"/>
-                    <app-form-feedback [control]="form.get('email')"></app-form-feedback>
+                    <app-form-feedback [control]="emailField"></app-form-feedback>
                 </div>
                 <div class="form__group">
                     <textarea name="feedback" id="feedback" placeholder="¿Cómo te podemos ayudar?" rows="6" 
-                        [ngClass]="{'form__control': true, 'form__control--invalid': form.get('feedback').invalid && form.get('feedback').dirty}"
+                        [ngClass]="{'form__control': true, 'form__control--invalid': feedbackField.invalid && feedbackField.dirty}"
                         formControlName="feedback"></textarea>
-                    <app-form-feedback [control]="form.get('feedback')"></app-form-feedback>
+                    <app-form-feedback [control]="feedbackField"></app-form-feedback>
                 </div>
                 <div class="form__buttons">
                     <button type="reset" class="btn btn--cancel">Cancelar</button>

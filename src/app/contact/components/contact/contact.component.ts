@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +14,9 @@ export class ContactComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.buildForm();
+  }
+
+  ngOnInit(): void {
   }
 
   /**
@@ -58,7 +61,22 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  /**
+   * This one get feedback name of form
+   */
+  get nameField(): AbstractControl {
+    return this.form.get('name')
   }
-
+  /**
+   * This one get email field of form
+   */
+  get emailField(): AbstractControl {
+    return this.form.get('email')
+  }
+  /**
+   * This one get feedback field of form
+   */
+  get feedbackField(): AbstractControl {
+    return this.form.get('feedback')
+  }
 }
