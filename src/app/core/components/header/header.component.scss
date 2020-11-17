@@ -33,6 +33,15 @@
               @apply text-gold;
             }
           }
+
+          &.cart-link {
+            @apply bg-white text-secundary rounded-sm relative;
+  
+            span {
+              @apply absolute top-0 right-0 bg-info rounded-sm text-white px-1 text-sm w-5 h-full text-center;
+              @apply flex flex-row items-center justify-center;
+            }
+          }
         }
 
         &.active {
@@ -57,7 +66,11 @@
           @apply text-base flex flex-row justify-end leading-normal mt-0 relative opacity-100;
 
           & a {
-            @apply w-auto inline-block mb-0;
+            @apply w-auto inline-block mb-0 mx-1;
+
+            &.cart-link span {
+              @apply -mt-3 -mr-3 rounded-full h-6 w-6;
+            }
           }
 
           &.active {

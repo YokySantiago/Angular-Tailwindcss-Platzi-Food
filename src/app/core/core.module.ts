@@ -4,9 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ProductService } from './services/product/product.service';
 import { MainComponent } from './components/layouts/main/main.component';
 import { NotFoundComponent } from './components/layouts/not-found/not-found.component';
+
+import { ProductService } from './services/product/product.service';
+import { CartService } from './services/cart/cart.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { NotFoundComponent } from './components/layouts/not-found/not-found.comp
     NotFoundComponent
   ],
   providers: [
-    ProductService
+    ProductService,
+    CartService
   ]
 })
 export class CoreModule { }

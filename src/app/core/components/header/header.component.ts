@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CartService } from '../../services/cart/cart.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,16 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  menu: {option: string, link: string}[] = [
-    {option: 'Productos', link: '/products'},
-    {option: 'Contáctenos', link: '/contact'},
+  menu: { option: string, link: string }[] = [
+    { option: 'Productos', link: '/products' },
+    { option: 'Contáctenos', link: '/contact' },
   ];
 
   menuOpened = false;
 
-  constructor() { }
+  total = 0;
+
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
+    this.cartService.cart$.subscribe(products => {
+      this.total = products.length;
+    });
   }
 
 }

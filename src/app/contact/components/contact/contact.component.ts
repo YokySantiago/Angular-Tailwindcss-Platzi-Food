@@ -65,18 +65,18 @@ export class ContactComponent implements OnInit {
    * This one get feedback name of form
    */
   get nameField(): AbstractControl {
-    return this.form.get('name')
+    return this.form.get('name');
   }
   /**
    * This one get email field of form
    */
   get emailField(): AbstractControl {
-    return this.form.get('email')
+    return this.form.get('email');
   }
   /**
    * This one get feedback field of form
    */
   get feedbackField(): AbstractControl {
-    return this.form.get('feedback')
+    return this.form.get('feedback');
   }
 }

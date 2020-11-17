@@ -1,0 +1,35 @@
+@layer components {
+    .contact-us {
+        @apply mt-8 bg-white p-4 grid grid-cols-1 relative;
+
+        &__content {
+            @apply col-start-1;
+
+            .content__title {
+                @apply flex flex-row justify-center items-center;
+
+                img {
+                    @apply h-8 inline mr-2;
+                }
+
+                p {
+                    @apply text-primary text-center font-semibold text-2xl tracking-tight py-4 inline;
+                }
+            }
+        }
+    }
+
+    @screen sm {
+        .contact-us {
+            @apply grid-cols-3;
+    
+            &__content {
+                @apply col-start-2;
+
+                .content__title p {
+                    @apply text-3xl;
+                }
+            }
+        }
+    }
+}

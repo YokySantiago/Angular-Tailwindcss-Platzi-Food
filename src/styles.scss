@@ -72,6 +72,10 @@
     &:active {
       @apply opacity-75;
     }
+
+    &:disabled {
+      @apply opacity-75;
+    }
   }
 
   @screen sm {
