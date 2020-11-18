@@ -1,0 +1,20 @@
+@layer components {
+    .order-content {
+        @apply w-10/12 mx-auto;
+    }
+    .resumen {
+        @apply flex flex-col items-end p-4;
+
+        &__content {
+            @apply grid grid-cols-2 gap-x-4;
+        }
+
+        &__title {
+            @apply font-bold text-sm text-right;
+        }
+
+        &__value {
+            @apply font-light text-right;
+        }
+    }
+}

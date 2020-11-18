@@ -1,0 +1,19 @@
+<section class="flex flex-col items-center py-4">
+    <img src="assets/img/undraw_cooking_lyxy.svg" alt="Cooking" class="h-24"/>
+    <p class="uppercase font-oswald inline font-semibold text-2xl sm:text-3xl tracking-tight">Ya casí lo <span class="text-primary inline">disfrutas</span></p>
+</section>
+<section *ngIf="(products | async) as resume" class="order-content container mx-auto">
+    <app-product-vertical-list [products]="resume"></app-product-vertical-list>
+    <section class="resumen">
+        <div class="resumen__content">
+            <div class="resumen__cantidad">
+                <p class="resumen__title">Cantidad</p>
+                <p class="resumen__value">{{ resume.length }}</p>
+            </div>
+            <div class="resumen__total">
+                <p class="resumen__title">Total</p>
+                <p class="resumen__value">{{ total | currency:'COP '}}</p>
+            </div>
+        </div>
+    </section>
+</section>

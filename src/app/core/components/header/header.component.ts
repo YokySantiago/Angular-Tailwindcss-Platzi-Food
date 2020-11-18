@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { CartService } from '../../services/cart/cart.service';
 
 @Component({
@@ -16,16 +19,17 @@ export class HeaderComponent implements OnInit {
 
   menuOpened = false;
 
-  total = 0;
+  total$ = new Observable<number>();
 
   constructor(
     private cartService: CartService
   ) { }
 
   ngOnInit(): void {
-    this.cartService.cart$.subscribe(products => {
-      this.total = products.length;
-    });
+    this.total$ = this.cartService.cart$
+      .pipe(
+        map(products => products.length)
+      );
   }
 
 }
